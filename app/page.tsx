@@ -1,6 +1,6 @@
-import styles from '@/app/ui/home.module.css';
 import AcmeLogo from '@/app/ui/acme-logo';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
+import styles from '@/app/ui/home.module.css';
 import { lusitana } from '@/app/ui/fonts';
 import Image from 'next/image';
 
@@ -13,7 +13,7 @@ export default function Page() {
       </div>
       <div className="mt-4 flex grow flex-col gap-4 md:flex-row">
         <div className="flex flex-col justify-center gap-6 rounded-lg bg-gray-50 px-6 py-10 md:w-2/5 md:px-20">
-        <div className={styles.shape}/>
+          <div className={styles.shape}></div>;
           <p className={`${lusitana.className} text-xl text-gray-800 md:text-3xl md:leading-normal`}>
             <strong>Welcome to Acme.</strong> This is the example for the{' '}
             <a href="https://nextjs.org/learn/" className="text-blue-500">
@@ -21,6 +21,9 @@ export default function Page() {
             </a>
             , brought to you by Vercel.
           </p>
+          <div
+            className="h-0 w-0 border-b-[30px] border-l-[20px] border-r-[20px] border-b-black border-l-transparent border-r-transparent"
+          />
           <Link
             href="/login"
             className="flex items-center gap-5 self-start rounded-lg bg-blue-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"
@@ -41,8 +44,8 @@ export default function Page() {
             src="/hero-mobile.png"
             width={560}
             height={620}
-            className="block md:hidden"
-            alt="Screenshot of the dashboard project showing mobile version"
+            className="hidden md:block"
+            alt="Screenshots of the dashboard project showing desktop and mobile versions"
           />
         </div>
       </div>
